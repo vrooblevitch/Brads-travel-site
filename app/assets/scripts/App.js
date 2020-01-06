@@ -5,9 +5,9 @@ import RevealOnScroll from "./modules/RevealOnScroll";
 import StickyHeader from "./modules/StickyHeader";
 
 new StickyHeader();
-new MobileMenu();
 new RevealOnScroll(document.querySelectorAll(".feature-item"), 75);
 new RevealOnScroll(document.querySelectorAll(".testimonial"), 60);
+new MobileMenu();
 let modal;
 
 document.querySelectorAll(".open-modal").forEach(el => {
@@ -19,7 +19,7 @@ document.querySelectorAll(".open-modal").forEach(el => {
           modal = new x.default();
           setTimeout(() => modal.openTheModal(), 20);
         })
-        .catch(() => console.log("There was a problem"));
+        .catch(() => console.log("There was a problem."));
     } else {
       modal.openTheModal();
     }

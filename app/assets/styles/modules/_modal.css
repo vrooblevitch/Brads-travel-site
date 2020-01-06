@@ -2,13 +2,13 @@
   opacity: 0;
   visibility: hidden;
   transform: scale(1.2);
-  transition: all 0.3s ease-out;
+  transition: all .3s ease-out;
   position: fixed;
   top: 0;
-  right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.94);
+  right: 0;
+  background-color: rgba(255, 255, 255, .94);
   z-index: 5;
   display: flex;
 
@@ -25,9 +25,9 @@
 
   &__description {
     text-align: center;
-    font-size: 1.35rem;
-    line-height: 1.65;
+    font-size: 1.3rem;
     font-weight: 300;
+    line-height: 1.65;
   }
 
   &__close {
@@ -35,10 +35,10 @@
     top: 15px;
     right: 15px;
     font-size: 2rem;
-    color: $mainBlue;
-    cursor: pointer;
-    transform-origin: 100% 0;
     transform: scaleX(1.2);
+    transform-origin: 100% 0;
+    cursor: pointer;
+    color: $mainBlue;
 
     &:hover {
       color: $mainOrange;
