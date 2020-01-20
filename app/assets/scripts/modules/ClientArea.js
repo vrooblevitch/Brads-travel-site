@@ -3,10 +3,9 @@ import Axios from "axios";
 class ClientArea {
   constructor() {
     this.injectHTML();
-    this.form = document.querySelector("client-area__form");
-    this.field = document.querySelector("client-area__input");
-    this.contentArea = document.querySelector("client-area__content-area");
-
+    this.form = document.querySelector(".client-area__form");
+    this.field = document.querySelector(".client-area__input");
+    this.contentArea = document.querySelector(".client-area__content-area");
     this.events();
   }
 
@@ -27,7 +26,7 @@ class ClientArea {
         this.contentArea.innerHTML = response.data;
       })
       .catch(() => {
-        this.clientArea.innerHTML = `<p class="client-area__error">That secret phrase is not correct.</p>`;
+        this.contentArea.innerHTML = `<p class="client-area__error">That secret phrase is not correct. Try again.</p>`;
         this.field.value = "";
         this.field.focus();
       });
